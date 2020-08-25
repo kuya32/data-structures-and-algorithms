@@ -14,23 +14,20 @@ const createServer = () => {
 
   app.get('/hello', greeting);
 
-  function greeting() {
-    var hello = ('Howdy!');
-    return hello;
+  function greeting(req, res) {
+    res.send('Howdy!');
   }
 
   app.get('/aboutme', bioOfMe);
 
-  function bioOfMe() {
-    var bio = ('I am Filipino and love corgis!');
-    return bio;
+  function bioOfMe(req, res) {
+    res.send('I am Filipino and love corgis!');
   }
 
   app.get('/favoritefoods', favFoods);
 
-  function favFoods() {
-    var foods = ['Sinigang', 'Mapo Tofu', 'KBBQ'];
-    return foods;
+  function favFoods(req, res) {
+    res.send('My favorite foods are Sinigang, Mapo Tofu and Pizza!');
   }
 
   var server = app.listen(3301, function () {
@@ -52,11 +49,16 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
-  let targetArray = input.filter(value => {
-    let targetArr = value.includes(target);
-    return targetArr;
+  let targetCount = 0;
+  let outside = input.map (outsideValue => {
+    let inner = outsideValue.map (innerValue => {
+      if (innerValue === target) {
+        targetCount++;
+      }
+    });
+    return inner;
   });
-  return targetArray.length;
+  return targetCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -71,13 +73,15 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
-  for (var i = 0; i < input.length; i ++) {
-    let sum = input[i].reduce((accumulator, value) => {
-      accumulator = value + value;
-      return accumulator
-    }, 0);
-    return sum;
-  }
+  let sum = 0;
+  let outside = input.map (outsideValue => {
+    let inner = outsideValue.map (innerValue => {
+      sum += innerValue
+
+    });
+    return inner;
+  });
+  return sum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,6 +98,14 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  let outside = input.filter (outsideValue => {
+    let inner = outsideValue.map (innerValue => {
+      if(innerValue % 5 === 0) {
+        return innerValue;
+      }
+      return Math.pow(2, outsideValue);
+    });
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -234,7 +246,7 @@ xdescribe('Testing challenge 2', () => {
   });
 });
 
-describe('Testing challenge 3', () => {
+xdescribe('Testing challenge 3', () => {
   test('It should add all the numbers in the arrays', () => {
     const nums = [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]];
 
@@ -242,7 +254,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return numbers divisible by five, then raise two to the power of the resulting numbers', () => {
     expect(divisibleByFiveTwoToThePower([[10, 20, 5, 4], [5, 6, 7, 9], [1, 10, 3]])).toStrictEqual([[1024, 1048576, 32], [32], [1024]]);
   });
