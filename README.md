@@ -1,4 +1,6 @@
-# 401 Code Challenges
+# 401 Code Challenges Table of Contents
+
+1.
 
 ## Reverse an Array
 

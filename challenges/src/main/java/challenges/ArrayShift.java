@@ -9,7 +9,11 @@ public class ArrayShift {
 
     public int[] insertShiftArray(int[] inputArray, int value) {
         int[] outputArray = new int[inputArray.length + 1];
-        double midLength = Math.ceil(inputArray.length/2);
+        double midLength = Math.ceil(inputArray.length/2.0);
+
+        if (inputArray.length == 0) {
+            outputArray[0] = value;
+        }
 
         for(int i = 0; i < inputArray.length; i++) {
             if (i == midLength) {
