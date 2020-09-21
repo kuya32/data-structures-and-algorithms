@@ -65,6 +65,32 @@ ________________________________________________________________________________
 
 ![Whiteboard for Code Challenge 3](assets/CC3Whiteboard.PNG)
 
+## Singly Linked List
+
+- Create a adds, checks and outputs the elements within the Linked List.
+
+### Challenge
+
+1. Can successfully instantiate an empty linked list
+2. Can properly insert into the linked list
+3. The head property will properly point to the first node in the linked list
+4. Can properly insert multiple nodes into the linked list
+5. Will return true when finding a value within the linked list that exists
+6. Will return false when searching for a value in the linked list that does not exist
+7. Can properly return a collection of all the values that exist in the linked list
+
+### Approach & Efficiency 4
+
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+### API
+
+- insert(): Takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
+
+- includes(): Takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+
+- toString(): Takes in no arguments and returns a string representing all the values in the Linked List. 
+
 __________________________________________________________________________________
 
 ## Resources
