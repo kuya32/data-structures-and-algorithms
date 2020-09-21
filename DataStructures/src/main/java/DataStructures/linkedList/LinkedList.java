@@ -1,33 +1,47 @@
 package DataStructures.linkedList;
 
 public class LinkedList {
-    Node head = null;
-    Node tail = null;
+    public Node head = null;
+    public Node tail = null;
 
-    public void insert(String value) {
-        Node node = new Node(value);
-        if(head == null) {
-            head = node;
-            tail = node;
+    public void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.addToFront(2);
+        list.addToFront(3);
+        list.addToFront(4);
+        System.out.println(list);
+    }
+
+    public void addToFront(int newValue) {
+        Node newNode = new Node(newValue);
+        if (this.head == null) {
+            this.head = newNode;
+            this.tail = this.head;
         } else {
-            node.next = head;
-            head = node;
+            newNode.next = this.head;
+            this.head = newNode;
         }
     }
 
     public String toString() {
-        String output = "";
-        Node currentNodeIAmLookingAt = head;
-        while(currentNodeIAmLookingAt != null) {
-            output = output + System.out.printf("{%s} -> ", currentNodeIAmLookingAt.value);
-            currentNodeIAmLookingAt = currentNodeIAmLookingAt.next;
-        }
-        output = output + "null";
-        return output;
+        return toString(this.head);
     }
 
-//    public static boolean includes(String value) {
-//
-//    }
+    public String toString(Node current) {
+        if(current == null) {
+            return "null";
+        }
+        return String.format("{%d} -> %s", current.value, toString(current.next));
+    }
+
+}
+
+class Node {
+    int value;
+    Node next;
+
+    Node(int value) {
+        this.value = value;
+    }
 
 }
