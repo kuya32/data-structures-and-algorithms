@@ -75,6 +75,7 @@ public class LinkedList {
         }
     }
 
+    // Used the website to construct method https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
     public int findKthFromEnd(int k) throws Exception {
         int length = 0;
         Node temp = this.head;
