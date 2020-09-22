@@ -3,6 +3,9 @@
 1. [Code Challenge 1: Reverse Array](#Reverse-an-Array)
 2. [Code Challenge 2: Array Shift](#Array-Shift)
 3. [Code Challenge 3: Binary Search](#Binary-Search)
+4. [Code Challenge 5: Linked List Implementation](#Singly-Linked-List)
+5. [Code Challenge 6: Insertions](#Insertions)
+6. [Code Challenege 7: Kth Value From End](#K-th-Value-From-End)
 
 ## Reverse an Array
 
@@ -91,9 +94,9 @@ ________________________________________________________________________________
 
 - toString(): Takes in no arguments and returns a string representing all the values in the Linked List.
 
-## Challenge Summary
+## Insertions
 
-- Building off the last Code Challenge by creating various methods to insert values into the Linked List. 
+- Building off the last Code Challenge by creating various methods to insert values into the Linked List.
 
 ### Challenge Description 5
 
@@ -126,6 +129,26 @@ ________________________________________________________________________________
 ### Solution 5
 
 ![Whiteboard for Code Challenge 6](assets/CC6Whiteboard.PNG)
+
+## K-th Value From End
+
+- Again building off the last Code Challenge, but now be able to identidy the value of Node given the arguement of Linked List position.
+
+### Challenge Description 6
+
+- Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+  - Ex. Input: head -> [1] -> [3] -> [8] -> [2] -> X, 0
+  - Output: 2
+
+### Approach & Efficiency 6
+
+- Big O
+  - Time: O(n)
+  - Space: O(n)
+
+### Solution 6
+
+![Whiteboard for Code Challenege 7](assets/CC7Whiteboard.PNG)
 __________________________________________________________________________________
 
 ## Resources
