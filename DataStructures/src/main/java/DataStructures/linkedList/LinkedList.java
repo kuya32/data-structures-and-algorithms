@@ -3,14 +3,17 @@ package DataStructures.linkedList;
 public class LinkedList {
     public Node head = null;
     public Node tail = null;
+    private Object Exception;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         LinkedList list = new LinkedList();
         list.append(2);
         list.append(5);
         list.insertBefore(5, 10);
         list.insertAfter(10, 55);
-
+        list.findKthFromEnd(2);
+        list.findKthFromEnd(0);
+        System.out.println(list.findKthFromEnd(3));
         System.out.println(list);
     }
 
@@ -39,6 +42,7 @@ public class LinkedList {
         }
             last.next = newNode;
         }
+
     }
 
     // Helped with writing the method: https://stackoverflow.com/questions/6824067/manual-linked-list-insert-before-method
@@ -69,6 +73,27 @@ public class LinkedList {
             }
             curr = curr.next;
         }
+    }
+
+    public int findKthFromEnd(int k) throws Exception {
+        int length = 0;
+        Node temp = this.head;
+
+        while(temp != null) {
+            temp = temp.next;
+            length++;
+        }
+
+        if(length > k) {
+            temp = this.head;
+            for (int i = 1; i < length - k ; i++) {
+                temp = temp.next;
+
+            }
+        } else {
+            throw new Exception("Your link list is shorter than your argument value");
+        }
+        return temp.value;
     }
 
 
