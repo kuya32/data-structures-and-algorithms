@@ -4,11 +4,13 @@ public class LinkedList {
     public Node head = null;
     public Node tail = null;
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         LinkedList list = new LinkedList();
-        list.addToFront(2);
-        list.addToFront(3);
-        list.addToFront(4);
+        list.append(2);
+        list.append(5);
+        list.insertBefore(5, 10);
+        list.insertAfter(10, 55);
+
         System.out.println(list);
     }
 
@@ -22,6 +24,53 @@ public class LinkedList {
             this.head = newNode;
         }
     }
+
+
+    //Helped with writing the method: https://www.geeksforgeeks.org/linked-list-set-2-inserting-a-node/
+    public void append(int newVal) {
+        Node newNode = new Node(newVal);
+        if (this.head == null) {
+            this.head = newNode;
+        } else {
+            newNode.next = null;
+            Node last = this.head;
+            while (last.next != null) {
+                last = last.next;
+        }
+            last.next = newNode;
+        }
+    }
+
+    // Helped with writing the method: https://stackoverflow.com/questions/6824067/manual-linked-list-insert-before-method
+    public void insertBefore(int val, int newVal) {
+        Node curr = this.head;
+
+        while(curr.next != null) {
+            if (curr.next.value == val) {
+                Node newNode = new Node(newVal);
+                newNode.next = curr.next;
+                curr.next = newNode;
+                return;
+            }
+            curr = curr.next;
+        }
+    }
+
+    // Helped me understand to change my while loop from curr.next to just curr: https://stackoverflow.com/questions/37137350/linkedlist-insert-after-node/37138082
+    public void insertAfter(int prev, int newValue) {
+        Node curr = this.head;
+
+        while (curr != null) {
+            if (curr.value == prev) {
+                Node newNode = new Node(newValue);
+                newNode.next = curr.next;
+                curr.next = newNode;
+                return;
+            }
+            curr = curr.next;
+        }
+    }
+
 
     public String toString() {
         return toString(this.head);

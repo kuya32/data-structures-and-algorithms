@@ -89,8 +89,43 @@ ________________________________________________________________________________
 
 - includes(): Takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 
-- toString(): Takes in no arguments and returns a string representing all the values in the Linked List. 
+- toString(): Takes in no arguments and returns a string representing all the values in the Linked List.
 
+## Challenge Summary
+
+- Building off the last Code Challenge by creating various methods to insert values into the Linked List. 
+
+### Challenge Description 5
+
+- ```.append(value)``` which adds a new node with the given value to the end of the list
+  - Ex. Input: head -> [1] -> [3] -> [2] -> X, 5
+  - Output: head -> [1] -> [3] -> [2] -> [5] -> X
+
+- ```.insertBefore(value, newVal)``` which add a new node with the given newValue immediately before the first value node
+  - Ex. Input: head -> [1] -> [3] -> [2] -> X, 3, 5
+  - Output: head -> [1] -> [5] -> [3] -> [2] -> X
+
+- ```.insertAfter(value, newVal)``` which add a new node with the given newValue immediately after the first value node
+  - Ex. Input: head -> [1] -> [3] -> [2] -> X, 3, 5
+  - Output: head -> [1] -> [3] -> [5] -> [2] -> X
+
+### Approach & Efficiency 5
+
+- Big O for ```.appened```
+  - Space: O(n)
+  - Time: O(n)
+
+- Big O for ```.insertBefore```
+  - Space: O(n)
+  - Time: O(n)
+
+- Big O for ```.insertAfter```
+  - Space: O(n)
+  - Time: O(n)
+
+### Solution 5
+
+![Whiteboard for Code Challenge 6](assets/CC6Whiteboard.PNG)
 __________________________________________________________________________________
 
 ## Resources
