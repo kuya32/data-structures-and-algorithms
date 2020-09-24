@@ -6,6 +6,7 @@
 4. [Code Challenge 5: Linked List Implementation](#Singly-Linked-List)
 5. [Code Challenge 6: Insertions](#Insertions)
 6. [Code Challenege 7: Kth Value From End](#K-th-Value-From-End)
+7. [Code Challenge 8: Linked List Zipped](#Linked-List-Zipped)
 
 ## Reverse an Array
 
@@ -149,6 +150,31 @@ ________________________________________________________________________________
 ### Solution 6
 
 ![Whiteboard for Code Challenege 7](assets/CC7Whiteboard.PNG)
+
+## Linked List Zipped
+
+- Write a function called zipLists which takes two linked lists as arguments.
+- Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+- Ex. zipLists(list1, list2)
+  - Arg list1: head -> [1] -> [3] -> [2] -> X
+  - Arg list2: head -> [5] -> [9] -> [4] -> X
+  - Output: head -> [1] -> [5] -> [3] -> [9] -> [2] -> [4] -> X
+
+### Challenge 7
+
+- Alternate between linked lists to create new Linked list of all values in both.
+
+### Approach & Efficiency 7
+
+- O(n);
+  - Take head of first linked list, put into separate linked list. Linked list call .next method on head of first list.
+  - Go to head of second list, put into next position. Use insert method on new linked list.
+  - Alternate between both.
+
+### Solution 7
+
+![Whiteboard for Code Challenege 8]()
+
 __________________________________________________________________________________
 
 ## Resources
