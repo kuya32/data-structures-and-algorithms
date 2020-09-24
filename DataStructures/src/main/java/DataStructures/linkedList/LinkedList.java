@@ -3,18 +3,25 @@ package DataStructures.linkedList;
 public class LinkedList {
     public Node head = null;
     public Node tail = null;
+    public Node next = null;
     private Object Exception;
 
     public static void main(String[] args) throws Exception {
         LinkedList list = new LinkedList();
+        LinkedList list2 = new LinkedList();
         list.append(2);
         list.append(5);
+        list2.append(32);
+        list2.append(23);
         list.insertBefore(5, 10);
         list.insertAfter(10, 55);
+        list2.insertBefore(23, 45);
+        list2.insertAfter(32, 65);
         list.findKthFromEnd(2);
         list.findKthFromEnd(0);
-        System.out.println(list.findKthFromEnd(3));
         System.out.println(list);
+        System.out.println(list2);
+        System.out.println(zipLists(list, list2));
     }
 
     public void addToFront(int newValue) {
@@ -97,6 +104,31 @@ public class LinkedList {
         return temp.value;
     }
 
+    // Used the website for help https://www.techiedelight.com/merge-alternate-nodes-two-linked-lists/
+    public static LinkedList zipLists(LinkedList one, LinkedList two) {
+        if(one == null) {
+            return two;
+        } else if (two == null) {
+            return one;
+        }
+
+        Node head1 = one.head;
+        Node head2 = two.head;
+        Node temp = head1.next;
+        Node temp2 = head2.next;
+        LinkedList shadowClone = new LinkedList();
+        shadowClone.append(head1.value);
+        shadowClone.append(head2.value);
+        System.out.println(shadowClone);
+
+        while(temp != null && temp2 != null) {
+            shadowClone.append(temp.value);
+            temp = temp.next;
+            shadowClone.append(temp2.value);
+            temp2 = temp2.next;
+        }
+        return shadowClone;
+    }
 
     public String toString() {
         return toString(this.head);
@@ -111,12 +143,3 @@ public class LinkedList {
 
 }
 
-class Node {
-    int value;
-    Node next;
-
-    Node(int value) {
-        this.value = value;
-    }
-
-}
