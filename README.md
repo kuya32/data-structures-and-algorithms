@@ -7,6 +7,7 @@
 5. [Code Challenge 6: Insertions](#Insertions)
 6. [Code Challenege 7: Kth Value From End](#K-th-Value-From-End)
 7. [Code Challenge 8: Linked List Zipped](#Linked-List-Zipped)
+8. [Code Challenege 10: Stack and a Queue Implementation](#Stacks-and-Queues)
 
 ## Reverse an Array
 
@@ -174,6 +175,47 @@ ________________________________________________________________________________
 ### Solution 7
 
 ![Whiteboard for Code Challenege 8](assets/CC8Whiteboard.png)
+
+## Stacks and Queues
+
+- Stack
+
+![Diagram of Stack](assets/stack.PNG)
+
+- Queue
+
+![Diagram of Queue](assets/queue.PNG)
+
+### Challenge 8
+
+- Create methods that manipulate the elements of a stack or queue
+
+### Approach & Efficiency 8
+
+- Big O for push, pop, enqueue and dequeue methods
+  - Time: O(1)
+  - Space: O(n)
+
+### API 8
+
+- Stack
+  - push
+    - Define a method called push which takes any value as an argument and adds a new node with that value to the top of the stack with an O(1) Time performance.
+  - pop
+    - Define a method called pop that does not take any argument, removes the node from the top of the stack, and returns the node’s value.
+  - peek
+    - Define a method called peek that does not take an argument and returns the value of the node located on top of the stack, without removing it from the stack.
+  - isEmpty
+    - Define a method called isEmpty that takes no argument, and returns a boolean indicating whether or not the stack is empty.
+- Queue
+  - enqueue
+    - Define a method called enqueue which takes any value as an argument and adds a new node with that value to the back of the queue with an O(1) Time performance.
+  - dequeue
+    - Define a method called dequeue that does not take any argument, removes the node from the front of the queue, and returns the node’s value.
+  - peek
+    - Define a method called peek that does not take an argument and returns the value of the node located in the front of the queue, without removing it from the queue.
+  - isEmpty
+    - Define a method called isEmpty that takes no argument, and returns a boolean indicating whether or not the queue is empty.
 
 __________________________________________________________________________________
 
