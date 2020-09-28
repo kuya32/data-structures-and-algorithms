@@ -23,11 +23,11 @@ public class QueueTest {
         que.enqueue(1);
         que.enqueue(2);
         que.enqueue(3);
-        assertEquals(1, que.dequeue().value);
+        assertEquals(1, que.dequeue());
         assertEquals(2, que.peek());
-        assertEquals(2, que.dequeue().value);
+        assertEquals(2, que.dequeue());
         assertEquals(3, que.peek());
-        assertEquals(3, que.dequeue().value);
+        assertEquals(3, que.dequeue());
         // Still need to test for when Queue is empty for Dequeue and Peek method should raise exception
 //        assertEquals("null", que.peek());
     }

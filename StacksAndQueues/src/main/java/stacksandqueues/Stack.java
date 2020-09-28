@@ -3,7 +3,7 @@ package stacksandqueues;
 import java.util.EmptyStackException;
 
 public class Stack {
-    public static Node top = null;
+    public Node top = null;
 
     public static void main(String[] args) {
         Stack topper = new Stack(null);
@@ -27,11 +27,11 @@ public class Stack {
         return temp.value;
     }
 
-    public Node pop() {
+    public int pop() {
         Node temp = top;
         top = top.next;
         temp.next = null;
-        return temp;
+        return temp.value;
     }
 
     public int peek() {

@@ -217,6 +217,25 @@ ________________________________________________________________________________
   - isEmpty
     - Define a method called isEmpty that takes no argument, and returns a boolean indicating whether or not the queue is empty.
 
+## Queue with Stacks
+
+- Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects.
+
+### Challenge Description 11
+
+- enqueue(value) which inserts value into the PseudoQueue, using a first-in, first-out approach.
+
+- dequeue() which extracts a value from the PseudoQueue, using a first-in, first-out approach.
+
+### Approach & Efficiency 11
+
+- Big O for enqueue and dequeue
+  - Time: O(n)
+  - Space: O(n)
+
+### Solution 11
+
+![Whiteboard for Code Challenge](assets/CC11Whiteboard.PNG)
 __________________________________________________________________________________
 
 ## Resources
