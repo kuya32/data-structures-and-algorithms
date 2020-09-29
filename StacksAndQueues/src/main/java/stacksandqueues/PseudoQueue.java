@@ -21,6 +21,7 @@ public class PseudoQueue {
         System.out.println(pse);
     }
 
+    //Used the website to help construct my enqueue and dequeue methods
     public int enqueue(int value) {
         System.out.println(value + " was queued!");
         return stacker1.push(value);
