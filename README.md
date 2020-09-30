@@ -8,6 +8,8 @@
 6. [Code Challenege 7: Kth Value From End](#K-th-Value-From-End)
 7. [Code Challenge 8: Linked List Zipped](#Linked-List-Zipped)
 8. [Code Challenege 10: Stack and a Queue Implementation](#Stacks-and-Queues)
+9. [Code Challenege 11: Queue with Stacks](#Queue-with-Stack)
+10. [Code Challenege 12: First In, First Out Animal Shelter](#First-In,-First-Out-Animal-Shelter)
 
 ## Reverse an Array
 
@@ -235,7 +237,34 @@ ________________________________________________________________________________
 
 ### Solution 11
 
-![Whiteboard for Code Challenge](assets/CC11Whiteboard.PNG)
+![Whiteboard for Code Challenge 11](assets/CC11Whiteboard.PNG)
+
+## First In, First Out Animal Shelter
+
+- Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+
+### Challenge Description 12
+
+- Implement the following methods:
+  - enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
+    - Input: {Fritzy:Cat} -> {Oro:Dog} -> {Theo: Cat}, {Blue:Cat}
+    - Output: {Blue:Cat} -> {Fritzy:Cat} -> {Oro:Dog} -> {Theo: Cat}
+  - dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
+    - Input: {Blue:Cat} -> {Fritzy:Cat} -> {Oro:Dog} -> {Theo: Cat}, Dog
+    - Output: {Blue:Cat} -> {Fritzy:Cat} -> {Theo: Cat}
+
+### Approach & Efficiency 12
+
+- Big O for Enqueue
+  - Time: O(1)
+  - Space: O(1)
+- Big O for Dequeue
+  - Time: O(n)
+  - Space: O(1)
+
+### Solution 12
+
+![Whiteboard for Code Challenge 12](assets/CC12Whiteboard.PNG)
 __________________________________________________________________________________
 
 ## Resources
