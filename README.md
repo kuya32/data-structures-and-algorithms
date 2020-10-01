@@ -7,9 +7,10 @@
 5. [Code Challenge 6: Insertions](#Insertions)
 6. [Code Challenege 7: Kth Value From End](#K-th-Value-From-End)
 7. [Code Challenge 8: Linked List Zipped](#Linked-List-Zipped)
-8. [Code Challenege 10: Stack and a Queue Implementation](#Stacks-and-Queues)
-9. [Code Challenege 11: Queue with Stacks](#Queue-with-Stack)
-10. [Code Challenege 12: First In, First Out Animal Shelter](#First-In,-First-Out-Animal-Shelter)
+8. [Code Challenge 10: Stack and a Queue Implementation](#Stacks-and-Queues)
+9. [Code Challenge 11: Queue with Stacks](#Queue-with-Stack)
+10. [Code Challenge 12: First In, First Out Animal Shelter](#First-In,-First-Out-Animal-Shelter)
+11. [Code Challenge 13: Multi Bracket Validation](#Multi-Bracket-Validation)
 
 ## Reverse an Array
 
@@ -265,6 +266,31 @@ ________________________________________________________________________________
 ### Solution 12
 
 ![Whiteboard for Code Challenge 12](assets/CC12Whiteboard.PNG)
+
+## Multi Bracket Validation
+
+- Check a string and see if it contains either '()', '{}', or '[]' and return either true or false. True if each opening braket has a repective closing bracket or false if the opening bracket doesn't have a closing bracket.
+
+### Challenge Description 13
+
+- Create a method ```public static boolean multiBracketValidation(String input)```
+  - Your function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
+    - Round Brackets : ()
+    - Square Brackets : []
+    - Curly Brackets : {}
+  - Input: {}(){} Output: TRUE
+  - Input: [({}] Output: FALSE
+
+### Approach & Efficiency 13
+
+- Big O
+  - Time: O(n)
+  - Space: O(n)
+
+### Solution 13
+
+![Whiteboard for Code Challenge 13](assets/CC13Whiteboard.PNG)
+
 __________________________________________________________________________________
 
 ## Resources
