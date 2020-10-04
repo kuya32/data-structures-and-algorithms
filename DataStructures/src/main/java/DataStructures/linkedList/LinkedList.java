@@ -4,7 +4,6 @@ public class LinkedList {
     public Node head = null;
     public Node tail = null;
     public Node next = null;
-    private Object Exception;
 
     public static void main(String[] args) throws Exception {
         LinkedList list = new LinkedList();
@@ -19,12 +18,15 @@ public class LinkedList {
         list2.insertAfter(32, 65);
         list.findKthFromEnd(2);
         list.findKthFromEnd(0);
+//        System.out.println(list);
+//        System.out.println(list2);
+//        System.out.println(zipLists(list, list2));
         System.out.println(list);
-        System.out.println(list2);
-        System.out.println(zipLists(list, list2));
+        System.out.println(list.includes(32));
     }
 
-    public void addToFront(int newValue) {
+    // This method adds a new node to the front of the linked list
+    public void insert(int newValue) {
         Node newNode = new Node(newValue);
         if (this.head == null) {
             this.head = newNode;
@@ -35,8 +37,22 @@ public class LinkedList {
         }
     }
 
+    //This method checks to see if a certain value is within the linked list
+    public boolean includes(int value) {
+        boolean hello = false;
+        while (head != null) {
+            if (head.value == value) {
+                hello = true;
+                break;
+            } else {
+                head = head.next;
+            }
+        }
+        return hello;
+    }
 
     //Helped with writing the method: https://www.geeksforgeeks.org/linked-list-set-2-inserting-a-node/
+    // This method appends the node to the end of the linked list
     public void append(int newVal) {
         Node newNode = new Node(newVal);
         if (this.head == null) {
@@ -53,6 +69,7 @@ public class LinkedList {
     }
 
     // Helped with writing the method: https://stackoverflow.com/questions/6824067/manual-linked-list-insert-before-method
+    // The insertBefore method adds a new node before a given node value in the linked list
     public void insertBefore(int val, int newVal) {
         Node curr = this.head;
 
@@ -68,6 +85,7 @@ public class LinkedList {
     }
 
     // Helped me understand to change my while loop from curr.next to just curr: https://stackoverflow.com/questions/37137350/linkedlist-insert-after-node/37138082
+    // The insertAfter method adds a new node after a given node value in the linked list
     public void insertAfter(int prev, int newValue) {
         Node curr = this.head;
 
