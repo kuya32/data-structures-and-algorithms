@@ -291,6 +291,29 @@ ________________________________________________________________________________
 
 ![Whiteboard for Code Challenge 13](assets/CC13Whiteboard.PNG)
 
+## Trees: BT and BTS
+
+- Able to traverse through a binary tree using three different ways:
+  - Preorder
+  - Inorder
+  - Postorder
+
+### Challenge Description 15
+
+- Made a Node, Binary Tree and Binary Search Tree class. The properties in Node consisted of int value, node left and right which shows the direction of numbers depending on the root node. The different methods to traverse a binary tree output an array list of numbers. The order of the numbers depend on the method used.
+
+### Approach & Efficiency 15
+
+- Big O for all three different ways to traverse a binary tree
+  - Time: O(n)
+  - Space: O(n)
+
+### API 15
+
+- Define a method for each of the depth first traversals called ```preOrder```, ```inOrder```, and ```postOrder``` which returns an array of the values, ordered appropriately.
+- Define a method named ```add``` that accepts a value, and adds a new node with that value in the correct location in the binary search tree.
+- Define a method named ```contains``` that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
+
 __________________________________________________________________________________
 
 ## Resources
