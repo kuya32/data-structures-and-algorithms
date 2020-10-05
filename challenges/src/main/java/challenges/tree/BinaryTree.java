@@ -85,6 +85,7 @@ public class BinaryTree {
         numbers.add(theo.value);
     }
 
+    // This website helped me construct my method https://stackoverflow.com/questions/23173932/how-to-find-max-value-in-a-binary-tree
     public int findMaximumValue(Node root) {
         int max = Integer.MIN_VALUE;
         if (root == null) {
