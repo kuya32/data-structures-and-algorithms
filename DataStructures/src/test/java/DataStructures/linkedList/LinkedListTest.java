@@ -25,7 +25,7 @@ public class LinkedListTest {
         assertTrue(test.includes(2));
         assertFalse(test.includes(32));
     }
-    
+
 //
 //
 ////    @Test public void testFindKthFromEnd() {
