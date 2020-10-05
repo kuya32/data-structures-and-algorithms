@@ -89,7 +89,15 @@ ________________________________________________________________________________
 
 ### Approach & Efficiency 4
 
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- Big O for insert method:
+  - Time: O(1)
+  - Space: O(1)
+- Big O for includes method:
+  - Time: O(1)
+  - Space: O
+- Big O for toString method:
+  - Time: O(1)
+  - Space: O(1)
 
 ### API
 
