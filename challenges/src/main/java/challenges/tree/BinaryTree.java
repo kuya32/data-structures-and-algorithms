@@ -11,21 +11,41 @@ public class BinaryTree {
         this.root = root;
     }
 
+    public static void main(String[] args) {
+        Node ten = new Node(10);
+        Node eight = new Node(8);
+        Node seven = new Node(7);
+        Node nine = new Node(9);
+        Node eleven = new Node(11);
+        Node twelve = new Node(12);
+        Node thirteen = new Node(13);
+
+        ten.left = eight;
+        eight.left = seven;
+        eight.right = nine;
+        ten.right = twelve;
+        twelve.left = eleven;
+        twelve.right = thirteen;
+
+        BinaryTree tree = new BinaryTree(ten);
+        System.out.println(tree.findMaximumValue(tree.root));
+    }
+
     public ArrayList<Integer> preOrder() {
         if (root == null) {
             return numbers;
         }
-        _preOrderTraversal(root);
+        preOrderTraversal(root);
         return numbers;
     }
 
-    public void _preOrderTraversal(Node alvin) {
+    public void preOrderTraversal(Node alvin) {
         numbers.add(alvin.value);
         if (alvin.left != null) {
-            _preOrderTraversal(alvin.left);
+            preOrderTraversal(alvin.left);
         }
         if (alvin.right != null) {
-            _preOrderTraversal(alvin.right);
+            preOrderTraversal(alvin.right);
         }
     }
 
@@ -33,17 +53,17 @@ public class BinaryTree {
         if (root == null) {
             return numbers;
         }
-        _inOrderTraversal(root);
+        inOrderTraversal(root);
         return numbers;
     }
 
-    public void _inOrderTraversal(Node simon) {
+    public void inOrderTraversal(Node simon) {
         if (simon.left != null) {
-            _inOrderTraversal(simon.left);
+            inOrderTraversal(simon.left);
         }
         numbers.add(simon.value);
         if (simon.right != null) {
-            _inOrderTraversal(simon.right);
+            inOrderTraversal(simon.right);
         }
     }
 
@@ -51,18 +71,37 @@ public class BinaryTree {
         if (root == null) {
             return numbers;
         }
-        _postOrderTraversal(root);
+        postOrderTraversal(root);
         return numbers;
     }
 
-    public void _postOrderTraversal(Node theo) {
+    public void postOrderTraversal(Node theo) {
         if (theo.left != null) {
-            _postOrderTraversal(theo.left);
+            postOrderTraversal(theo.left);
         }
         if (theo.right != null) {
-            _postOrderTraversal(theo.right);
+            postOrderTraversal(theo.right);
         }
         numbers.add(theo.value);
+    }
+
+    public int findMaximumValue(Node root) {
+        int max = Integer.MIN_VALUE;
+        if (root == null) {
+            return max;
+        } else {
+            int leftMax = findMaximumValue(root.left);
+            int rightMax = findMaximumValue(root.right);
+            if (leftMax > rightMax) {
+                max = leftMax;
+            } else {
+                max = rightMax;
+            }
+            if (root.value > max) {
+                max = root.value;
+            }
+        }
+        return max;
     }
 
 }

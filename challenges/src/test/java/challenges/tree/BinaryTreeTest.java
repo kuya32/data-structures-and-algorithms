@@ -118,4 +118,32 @@ public class BinaryTreeTest {
 //        int indexAt6 = tree.postOrder().get(6);
 //        assertEquals(10, indexAt6);
     }
+
+    @Test
+    public void testMaxValue() {
+        Node ten = new Node(10);
+        Node eight = new Node(8);
+        Node seven = new Node(7);
+        Node nine = new Node(9);
+        Node eleven = new Node(11);
+        Node twelve = new Node(12);
+        Node thirteen = new Node(13);
+
+        ten.left = eight;
+        eight.left = seven;
+        eight.right = nine;
+        ten.right = twelve;
+        twelve.left = eleven;
+        twelve.right = thirteen;
+
+        BinaryTree tree = new BinaryTree(ten);
+        assertEquals(13, tree.findMaximumValue(tree.root));
+        Node thirtyTwo = new Node(32);
+        thirteen.right = thirtyTwo;
+        assertEquals(32, tree.findMaximumValue(tree.root));
+        Node fiftySix = new Node(56);
+        nine.right = fiftySix;
+        assertEquals(56, tree.findMaximumValue(tree.root));
+        assertEquals(Integer.MIN_VALUE, tree.findMaximumValue(null));
+    }
 }
