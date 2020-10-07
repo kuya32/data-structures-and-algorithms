@@ -3,6 +3,7 @@ package challenges.tree;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
@@ -145,5 +146,28 @@ public class BinaryTreeTest {
         nine.right = fiftySix;
         assertEquals(56, tree.findMaximumValue(tree.root));
         assertEquals(Integer.MIN_VALUE, tree.findMaximumValue(null));
+    }
+
+    @Test
+    public void testBreadthFirstTraversal() {
+        Node ten = new Node(10);
+        Node eight = new Node(8);
+        Node seven = new Node(7);
+        Node nine = new Node(9);
+        Node eleven = new Node(11);
+        Node twelve = new Node(12);
+        Node thirteen = new Node(13);
+
+        ten.left = eight;
+        eight.left = seven;
+        eight.right = nine;
+        ten.right = twelve;
+        twelve.left = eleven;
+        twelve.right = thirteen;
+
+        BinaryTree tree = new BinaryTree(ten);
+        BinaryTree tree2 = new BinaryTree(null);
+        assertEquals(7, tree.breadthFirstTraversal(tree).size());
+        assertNotNull(tree.breadthFirstTraversal(tree));
     }
 }
