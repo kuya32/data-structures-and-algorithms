@@ -107,6 +107,7 @@ public class BinaryTree {
         return max;
     }
 
+    //Assistance from David Dickens
     public ArrayList<Integer> breadthFirstTraversal(BinaryTree tree) {
         Node current = tree.root;
         Queue<Node> que = new LinkedList<>();
