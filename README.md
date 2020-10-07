@@ -13,6 +13,7 @@
 11. [Code Challenge 13: Multi Bracket Validation](#Multi-Bracket-Validation)
 12. [Code Challenge 15: Trees: BT and BTS](#Trees:-BT-and-BTS)
 13. [Code Challenge 16: Maximum Value in a Binary Tree](#Maximum-Value-in-a-Binary-Tree)
+14. [Code Challenge 17: Breadth First Traversal](#Breadth-First-Traversal)
 
 ## Reverse an Array
 
@@ -341,6 +342,24 @@ ________________________________________________________________________________
 ### Solution 16
 
 ![Code Challenge 16 Whiteboard](assets/CC16Whiteboard.PNG)
+
+## Breadth First Traversal
+
+- The method will take in a Binary Tree and return an array list of the indvidual nodes of the tree from top to bottom, left to right. The beginning node value of the array would be the root and the last node value of the array is the furthest right leaf node.
+
+### Challenge Description 17
+
+- Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+
+### Approach & Efficiency 17
+
+- Big O:
+  - Time: O(n)
+  - Space: O(n)
+
+### Solution 17
+
+![Code Challenge 17 Whiteboard](assets/CC17Whiteboard.PNG)
 
 __________________________________________________________________________________
 

@@ -1,7 +1,8 @@
 package challenges.tree;
 
-
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTree {
     public Node root = null;
@@ -29,6 +30,7 @@ public class BinaryTree {
 
         BinaryTree tree = new BinaryTree(ten);
         System.out.println(tree.findMaximumValue(tree.root));
+        System.out.println(tree.breadthFirstTraversal(tree));
     }
 
     public ArrayList<Integer> preOrder() {
@@ -103,6 +105,26 @@ public class BinaryTree {
             }
         }
         return max;
+    }
+
+    public ArrayList<Integer> breadthFirstTraversal(BinaryTree tree) {
+        Node current = tree.root;
+        Queue<Node> que = new LinkedList<>();
+        que.add(current);
+        while (!que.isEmpty()) {
+
+            current = (Node) que.peek();
+            que.remove();
+            numbers.add(current.value);
+            if (current.left != null) {
+                que.add(current.left);
+            }
+            if (current.right != null) {
+                que.add(current.right);
+            }
+
+        }
+        return numbers;
     }
 
 }
