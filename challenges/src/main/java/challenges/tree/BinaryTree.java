@@ -8,6 +8,10 @@ public class BinaryTree {
     public Node root = null;
     public ArrayList<Integer> numbers = new ArrayList<>();
 
+    public BinaryTree() {
+        this.root = root;
+    };
+
     public BinaryTree(Node root) {
         this.root = root;
     }
@@ -127,5 +131,4 @@ public class BinaryTree {
         }
         return numbers;
     }
-
 }
