@@ -9,7 +9,7 @@ public class Stack<T> {
         if(top == null) {
             this.top = new Node<T>(value);
         } else {
-            this.top = new Node<T>(value, this.top);
+            this.top = new Node<T>(value, this.top, top.left, top.right);
         }
         return top;
     }
