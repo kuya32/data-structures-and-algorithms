@@ -2,8 +2,8 @@
 
 Insertion Sort is a sorting algorithm that traverses the array multiple times as it slowly builds
 out the correct sorting sequence. The array is split into two parts, sorted and unsorted. Values
- from the unsorted part are picked and placed at the correct position in the sorted part. 
- 
+ from the unsorted part are picked and placed at the correct position in the sorted part.
+
 ### Pseudocode
 
 ![Insertion Sort Pseudocode](../img/insertionSort.PNG)
@@ -27,6 +27,3 @@ Sample Array: ``[8, 4, 23, 42, 16, 15]``
     - The basic operation of this algorithm is comparison. This will happen n * (n-1) number of times…concluding the algorithm to be n squared.
 - Space: O(1)
     - No additional space is being created. This array is being sorted in place...keeping the space at constant O(1).
-
-
-
