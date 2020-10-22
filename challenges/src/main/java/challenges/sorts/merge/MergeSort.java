@@ -42,13 +42,16 @@ public class MergeSort {
             k = k + 1;
         }
         if (i == left.length) {
-            arr[k] = right[j];
-            i = i + 1;
+            for (int l = j; l < right.length; l++) {
+                arr[k] = right[l];
+                k++;
+            }
         } else {
-            arr[k] = left[i];
-            j = j + 1;
+            for (int r = i; r < left.length; r++) {
+                arr[k] = left[r];
+                k++;
+            }
         }
-        k = k + 1;
         return arr;
     }
 
