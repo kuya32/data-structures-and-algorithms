@@ -14,6 +14,7 @@
 12. [Code Challenge 15: Trees: BT and BTS](#Trees:-BT-and-BTS)
 13. [Code Challenge 16: Maximum Value in a Binary Tree](#Maximum-Value-in-a-Binary-Tree)
 14. [Code Challenge 17: Breadth First Traversal](#Breadth-First-Traversal)
+15. [Code Challenge 31: Repeated Word](#Repeated-Word)
 
 ## Reverse an Array
 
@@ -360,6 +361,24 @@ ________________________________________________________________________________
 ### Solution 17
 
 ![Code Challenge 17 Whiteboard](assets/CC17Whiteboard.PNG)
+
+## Repeated Word
+
+- Find the first repeated word in a book.
+
+### Challenge Description 31
+
+- The function method repeatedWord takes in a lengthy string parameter and returns the first word to occcure more than once in the provided string. 
+
+### Approach & Efficiency31
+
+- Big O:
+  - Time: O(n^2)
+  - Space: O(n)
+
+### Solution 31
+
+![Code Challenege 31 Whiteboard](assets/cc31.PNG)
 
 __________________________________________________________________________________
 
