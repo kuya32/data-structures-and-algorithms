@@ -16,6 +16,14 @@ public class BinaryTree {
         this.root = root;
     }
 
+    public Node getRoot() {
+        return root;
+    }
+
+    public void setRoot(Node root) {
+        this.root = root;
+    }
+
     public static void main(String[] args) {
         Node ten = new Node(10);
         Node eight = new Node(8);
@@ -34,7 +42,7 @@ public class BinaryTree {
 
         BinaryTree tree = new BinaryTree(ten);
         System.out.println(tree.findMaximumValue(tree.root));
-        System.out.println(tree.breadthFirstTraversal(tree));
+        System.out.println(tree.inOrder());
     }
 
     public ArrayList<Integer> preOrder() {
