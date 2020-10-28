@@ -15,6 +15,7 @@
 13. [Code Challenge 16: Maximum Value in a Binary Tree](#Maximum-Value-in-a-Binary-Tree)
 14. [Code Challenge 17: Breadth First Traversal](#Breadth-First-Traversal)
 15. [Code Challenge 31: Repeated Word](#Repeated-Word)
+16. [Code Challenege 32: Tree Intersection](#Common-Value-Trees)
 
 ## Reverse an Array
 
@@ -368,7 +369,7 @@ ________________________________________________________________________________
 
 ### Challenge Description 31
 
-- The function method repeatedWord takes in a lengthy string parameter and returns the first word to occcure more than once in the provided string. 
+- The function method repeatedWord takes in a lengthy string parameter and returns the first word to occcure more than once in the provided string.
 
 ### Approach & Efficiency31
 
@@ -379,6 +380,24 @@ ________________________________________________________________________________
 ### Solution 31
 
 ![Code Challenege 31 Whiteboard](assets/cc31.PNG)
+
+## Common Value Trees
+
+- Find common values in 2 binary trees.
+
+### Challenge Description 32
+
+- The function method treeIntersection takes in two binary trees and returns a hashset of integers that are common between the two trees.
+
+### Approach & Efficiency 32
+
+- Big O:
+  - Time: O(n^2)
+  - Space: O(n)
+
+### Solution 32
+
+![Code Challenge 32 Whiteboard](assets/CC32Whiteboard.PNG)
 
 __________________________________________________________________________________
 
