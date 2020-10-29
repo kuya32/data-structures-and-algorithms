@@ -15,7 +15,8 @@
 13. [Code Challenge 16: Maximum Value in a Binary Tree](#Maximum-Value-in-a-Binary-Tree)
 14. [Code Challenge 17: Breadth First Traversal](#Breadth-First-Traversal)
 15. [Code Challenge 31: Repeated Word](#Repeated-Word)
-16. [Code Challenege 32: Tree Intersection](#Common-Value-Trees)
+16. [Code Challenge 32: Tree Intersection](#Common-Value-Trees)
+17. [Code Challenge 33: HashMap Left Join](#Hashmap-LEFT-JOIN)
 
 ## Reverse an Array
 
@@ -399,6 +400,23 @@ ________________________________________________________________________________
 
 ![Code Challenge 32 Whiteboard](assets/CC32Whiteboard.PNG)
 
+## Hashmap LEFT JOIN
+
+- Implement a simplified LEFT JOIN for 2 Hashmaps.
+
+### Challenge 33
+
+- The leftJoin function LEFT Joins two hashmaps into a single data structure. If the keys in both hash maps match, assign third array position to the second hash map value.
+
+### Approach & Efficiency 33
+
+- Big O:
+  - Time: O(n)
+  - Space: O(n)
+
+### Solution 33
+
+![Code Challenge 33 Whiteboard](assets/CC33Whiteboard.PNG)
 __________________________________________________________________________________
 
 ## Resources
