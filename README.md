@@ -17,6 +17,7 @@
 15. [Code Challenge 31: Repeated Word](#Repeated-Word)
 16. [Code Challenge 32: Tree Intersection](#Common-Value-Trees)
 17. [Code Challenge 33: HashMap Left Join](#Hashmap-LEFT-JOIN)
+18. [Code Challenge 35: Graph Implementation](#Graph-Implementation)
 
 ## Reverse an Array
 
@@ -417,6 +418,46 @@ ________________________________________________________________________________
 ### Solution 33
 
 ![Code Challenge 33 Whiteboard](assets/CC33Whiteboard.PNG)
+
+## Graph Implementation
+
+- A graph is a data structure consisting of set of verticies and edges.
+
+### Challenge 35
+
+- Implement your own Graph. The graph should be represented as an adjacency list, and should include the following methods:
+  - AddNode()
+  - AddEdge()
+  - GetNodes()
+  - GetNeighbors()
+  - Size()
+
+### Approach & Efficiency 35
+
+- Big O:
+  - Time: O(1)
+  - Space: O(n^2)
+
+### API 35
+
+- AddNode()
+  - Adds a new node to the graph
+  - Takes in the value of that node
+  - Returns the added node
+- AddEdge()
+  - Adds a new edge between two nodes in the graph
+  - Include the ability to have a “weight”
+  - Takes in the two nodes to be connected by the edge
+  - Both nodes should already be in the Graph
+- GetNodes()
+  - Returns all of the nodes in the graph as a collection (set, list, or similar)
+- GetNeighbors()
+  - Returns a collection of edges connected to the given node
+  - Takes in a given node
+  - Include the weight of the connection in the returned collection
+- Size()
+  - Returns the total number of nodes in the graph
+
 __________________________________________________________________________________
 
 ## Resources
