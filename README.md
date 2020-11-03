@@ -458,6 +458,25 @@ ________________________________________________________________________________
 - Size()
   - Returns the total number of nodes in the graph
 
+## Breadth First Graph Traversal
+
+- The method first visits adjacent unvisited vertices of the given node. The method marks them as visited, displayed and inserted into a queue.
+
+### Challenge Description 36
+
+- Implement a breadth-first traversal on a graph.
+- The breadthFirstGraphTraversal method takes in any starting graph node and returns the collection of nods in the order they were visited.
+
+### Approach & Efficiency 36
+
+- Big O:
+  - Time: O(n)
+  - Space: O(3n)
+
+### Solution 36
+
+![Code Challenge 36 Whiteboard](assets/breadthfirstgraph.PNG)
+
 __________________________________________________________________________________
 
 ## Resources
