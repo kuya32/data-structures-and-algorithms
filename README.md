@@ -485,17 +485,17 @@ ________________________________________________________________________________
 
 ### Challenge Description 37
 
-- The functrion getEdges takes in a graph and an array of city names and returns whether the full trip is possible with direct flights, and how much it would cost.
+- The function isItWorth takes in a graph and an array of city names and returns whether the full trip is possible with direct flights, and how much it would cost.
 
 ### Approach & Efficiency 37
 
 - Big O:
-  - Time:
-  - Space:
+  - Time: O(n^2)
+  - Space: O(n)
 
 ### Solution 37
 
-![Code Challenge 37 Whiteboard](assets/)
+![Code Challenge 37 Whiteboard](assets/CC37Whiteboard.PNG)
 
 __________________________________________________________________________________
 

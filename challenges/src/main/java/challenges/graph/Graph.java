@@ -70,11 +70,11 @@ public class Graph {
         return this.vertices.size();
     }
 
-    public ArrayList<GraphNode> getVertexes() {
+    public ArrayList<GraphNode> getVertices() {
         return vertices;
     }
 
-    public void setVertexes(ArrayList<GraphNode> vertices) {
+    public void setVertices(ArrayList<GraphNode> vertices) {
         this.vertices = vertices;
     }
 
