@@ -18,6 +18,8 @@
 16. [Code Challenge 32: Tree Intersection](#Common-Value-Trees)
 17. [Code Challenge 33: HashMap Left Join](#Hashmap-LEFT-JOIN)
 18. [Code Challenge 35: Graph Implementation](#Graph-Implementation)
+19. [Code Challenge 36: Breadth First Graph Traversal](#Breadth-First-Graph-Traversal)
+20. [Code Challenge 37: Get Edges](#Get-Edges)
 
 ## Reverse an Array
 
@@ -476,6 +478,24 @@ ________________________________________________________________________________
 ### Solution 36
 
 ![Code Challenge 36 Whiteboard](assets/breadthfirstgraph.PNG)
+
+## Get Edges
+
+- Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be?
+
+### Challenge Description 37
+
+- The functrion getEdges takes in a graph and an array of city names and returns whether the full trip is possible with direct flights, and how much it would cost.
+
+### Approach & Efficiency 37
+
+- Big O:
+  - Time:
+  - Space:
+
+### Solution 37
+
+![Code Challenge 37 Whiteboard](assets/)
 
 __________________________________________________________________________________
 
