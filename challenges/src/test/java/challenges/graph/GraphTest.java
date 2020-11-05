@@ -79,6 +79,42 @@ public class GraphTest {
         assertEquals(output, graph.breadthFirstGraphTraversal(graph.vertices.get(0)).toString());
     }
 
+    @Test
+    public void depthFirstTraversalTest() throws Exception {
+        Graph graph = new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+        graph.addNode("E");
+        graph.addNode("F");
+        graph.addNode("G");
+        graph.addNode("H");
+        graph.addEdge(graph.vertices.get(0), graph.vertices.get(1), 1);
+        graph.addEdge(graph.vertices.get(0), graph.vertices.get(3), 11);
+        graph.addEdge(graph.vertices.get(1), graph.vertices.get(2), 111);
+        graph.addEdge(graph.vertices.get(2), graph.vertices.get(6), 1111);
+        graph.addEdge(graph.vertices.get(1), graph.vertices.get(3), 11111);
+        graph.addEdge(graph.vertices.get(3), graph.vertices.get(4), 111111);
+        graph.addEdge(graph.vertices.get(3), graph.vertices.get(7), 1111111);
+        graph.addEdge(graph.vertices.get(3), graph.vertices.get(5), 11111111);
+        graph.addEdge(graph.vertices.get(7), graph.vertices.get(5), 111111111);
+        String output = "[A, B, C, G, D, E, H, F]";
+
+        System.out.println(graph.depthFirstGraphTraversal(graph).toString());
+        assertEquals(output, graph.depthFirstGraphTraversal(graph).toString());
+    }
+
+    @Test(expected = Exception.class)
+    public void depthFirstTraversalExceptionTest() throws Exception {
+        Graph graph = new Graph();
+
+        String output = "[]";
+
+        System.out.println(graph.depthFirstGraphTraversal(graph).toString());
+        assertEquals(output, graph.depthFirstGraphTraversal(graph).toString());
+    }
+
 
     @Test
     public void sizeCheckTest() throws Exception {
