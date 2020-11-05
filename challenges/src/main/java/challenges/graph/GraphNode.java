@@ -25,4 +25,11 @@ public class GraphNode<T> {
     public void setEdges(ArrayList<Edge> edges) {
         this.edges = edges;
     }
+
+    @Override
+    public String toString() {
+        return "GraphNode{" +
+                "value=" + value +
+                '}';
+    }
 }

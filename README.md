@@ -497,6 +497,24 @@ ________________________________________________________________________________
 
 ![Code Challenge 37 Whiteboard](assets/CC37Whiteboard.PNG)
 
+## Depth Graph Traversal
+
+Conduct a depth first preorder traversal on a graph
+
+### Challenge Description 38
+
+- The function depthFirstGraphTraversal takes in a graph and traverses forward (in depth) while there is further possible nodes. If not the, the function backtracks and continues until who graph is traversed. The function will return a collection of nodes in their pre-order depth-first traversal order.
+
+### Approach & Efficiency 38
+
+- Big O:
+  - Time: O(V + E)
+  - Space: O(n)
+
+### Solution 38
+
+![Code Challenge 38 Whiteboard](assets/CC38Whiteboard.PNG)
+
 __________________________________________________________________________________
 
 ## Resources

@@ -66,6 +66,32 @@ public class Graph {
         return verticesValue;
     }
 
+    // Link is where I got the stack idea from: https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/#:~:text=%20Solution%3A%20%201%20Approach%3A%20Depth-first%20search%20is,node%20as%20visited%20and%20print%20the...%20More%20
+    public ArrayList<String> depthFirstGraphTraversal(Graph graph) {
+        Stack<GraphNode> stack = new Stack<>();
+        ArrayList<String> visitedNodes = new ArrayList<>();
+        if (graph == null) {
+            return visitedNodes;
+        }
+        GraphNode root = graph.getNodes().get(0);
+        stack.add(root);
+        while (!stack.isEmpty()) {
+            GraphNode top = stack.peek();
+            stack.pop();
+            visitedNodes.add(top.getValue().toString());
+            ArrayList<Edge> buddies = top.getEdges();
+            for (int i = buddies.size() - 1; i >= 0; i--) {
+                String string = buddies.get(i).getDestination().getValue().toString();
+                if (buddies.get(i).getDestination().getEdges() != null
+                        && !visitedNodes.contains(string)
+                        && !stack.contains(buddies.get(i).getDestination())) {
+                    stack.add(buddies.get(i).getDestination());
+                }
+            }
+        }
+        return visitedNodes;
+    }
+
     public int size() {
         return this.vertices.size();
     }
