@@ -5,26 +5,6 @@ public class LinkedList {
     public Node tail = null;
     public Node next = null;
 
-    public static void main(String[] args) throws Exception {
-        LinkedList list = new LinkedList();
-        LinkedList list2 = new LinkedList();
-        list.append(2);
-        list.append(5);
-        list2.append(32);
-        list2.append(23);
-        list.insertBefore(5, 10);
-        list.insertAfter(10, 55);
-        list2.insertBefore(23, 45);
-        list2.insertAfter(32, 65);
-        list.findKthFromEnd(2);
-        list.findKthFromEnd(0);
-//        System.out.println(list);
-//        System.out.println(list2);
-//        System.out.println(zipLists(list, list2));
-        System.out.println(list);
-        System.out.println(list.includes(32));
-    }
-
     // This method adds a new node to the front of the linked list
     public void insert(int newValue) {
         Node newNode = new Node(newValue);
@@ -70,12 +50,17 @@ public class LinkedList {
 
     // Helped with writing the method: https://stackoverflow.com/questions/6824067/manual-linked-list-insert-before-method
     // The insertBefore method adds a new node before a given node value in the linked list
-    public void insertBefore(int val, int newVal) {
+    public void insertAfter(int val, int newVal) {
         Node curr = this.head;
+        Node newNode = new Node(newVal);
+
+        if (curr == null) {
+            System.out.println("insertAfter() does not work");
+            return;
+        }
 
         while(curr.next != null) {
             if (curr.next.value == val) {
-                Node newNode = new Node(newVal);
                 newNode.next = curr.next;
                 curr.next = newNode;
                 return;
@@ -86,12 +71,17 @@ public class LinkedList {
 
     // Helped me understand to change my while loop from curr.next to just curr: https://stackoverflow.com/questions/37137350/linkedlist-insert-after-node/37138082
     // The insertAfter method adds a new node after a given node value in the linked list
-    public void insertAfter(int prev, int newValue) {
+    public void insertBefore  (int val, int newValue) {
         Node curr = this.head;
+        Node newNode = new Node(newValue);
+
+        if (curr == null) {
+            System.out.println("insertAfter() does not work");
+            return;
+        }
 
         while (curr != null) {
-            if (curr.value == prev) {
-                Node newNode = new Node(newValue);
+            if (curr.value == val) {
                 newNode.next = curr.next;
                 curr.next = newNode;
                 return;
@@ -137,7 +127,6 @@ public class LinkedList {
         LinkedList shadowClone = new LinkedList();
         shadowClone.append(head1.value);
         shadowClone.append(head2.value);
-        System.out.println(shadowClone);
 
         while(temp != null && temp2 != null) {
             shadowClone.append(temp.value);

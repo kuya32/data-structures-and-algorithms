@@ -16,7 +16,9 @@ public class StackTest {
         assertEquals(4, topper.push(4));
         assertEquals(4, topper.top.value);
     }
-    @Test public void testStackPopAndPeek() {
+
+    @Test (expected = Exception.class)
+    public void testStackPopAndPeek() throws Exception {
         Stack topper = new Stack(null);
         topper.push(1);
         topper.push(2);
@@ -26,8 +28,9 @@ public class StackTest {
         assertEquals(2, topper.pop());
         assertEquals(1, topper.peek());
         assertEquals(1, topper.pop());
-        // Still need to test for when stack is empty for Pop and Peek method should raise exception
-//        assertEquals("null", topper.peek());
+        assertTrue(topper.isEmpty());
+        topper.pop();
+        topper.peek();
     }
 
     @Test public void testStackIsEmpty() {
@@ -37,7 +40,6 @@ public class StackTest {
         assertFalse("false", topper.isEmpty());
     }
 
-    // Ask TAs or Nicholas if I am testing for exception correctly
     @Test public void testCheckForException() {
         Stack topper = new Stack(null);
         Exception exception = assertThrows(EmptyStackException.class, topper::peek);

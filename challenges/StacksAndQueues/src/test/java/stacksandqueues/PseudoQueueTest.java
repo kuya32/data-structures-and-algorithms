@@ -16,7 +16,7 @@ public class PseudoQueueTest {
     }
 
     @Test
-    public void testPseudoQueueDequeue() {
+    public void testPseudoQueueDequeue() throws Exception {
         PseudoQueue pse = new PseudoQueue();
         pse.enqueue(1);
         pse.enqueue(2);
@@ -24,7 +24,6 @@ public class PseudoQueueTest {
         assertEquals(1, pse.dequeue());
         assertEquals(2, pse.dequeue());
         assertEquals(3, pse.dequeue());
-
     }
 
     

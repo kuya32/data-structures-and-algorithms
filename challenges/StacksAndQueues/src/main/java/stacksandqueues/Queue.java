@@ -1,22 +1,11 @@
 package stacksandqueues;
 
 import java.util.EmptyStackException;
+import java.util.concurrent.ExecutionException;
 
 public class Queue {
     public static Node front = null;
     public static Node rear = null;
-
-    public static void main(String[] args) {
-        Queue que = new Queue();
-        que.enqueue(1);
-        que.enqueue(2);
-        que.enqueue(3);
-        System.out.println(que);
-        que.dequeue();
-        System.out.println(que);
-        System.out.println(que.isEmpty());
-        que.peek();
-    }
 
     public Queue() {
         front = null;
@@ -35,9 +24,9 @@ public class Queue {
         return backside.value;
     }
 
-    public Node dequeue() {
+    public int dequeue() throws Exception{
         if (front == null) {
-            return null;
+            throw new Exception("Queue is empty!");
         }
 
         Node backside = front;
@@ -47,7 +36,7 @@ public class Queue {
         if (front == null) {
             rear = null;
         }
-        return backside;
+        return backside.value;
     }
 
     // Used this website to work on exception https://cs.colby.edu/courses/S18/cs231/notes/outlines11.pdf

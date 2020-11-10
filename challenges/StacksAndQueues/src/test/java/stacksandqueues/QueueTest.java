@@ -18,7 +18,8 @@ public class QueueTest {
         System.out.println(que);
     }
 
-    @Test public void testQueueDequeueAndPeek() {
+    @Test (expected = Exception.class)
+    public void testQueueDequeueAndPeek() throws Exception{
         Queue que = new Queue();
         que.enqueue(1);
         que.enqueue(2);
@@ -28,8 +29,9 @@ public class QueueTest {
         assertEquals(2, que.dequeue());
         assertEquals(3, que.peek());
         assertEquals(3, que.dequeue());
-        // Still need to test for when Queue is empty for Dequeue and Peek method should raise exception
-//        assertEquals("null", que.peek());
+        assertTrue(que.isEmpty());
+        que.dequeue();
+        que.peek();
     }
 
     @Test public void testQueueIsEmpty() {
@@ -39,7 +41,6 @@ public class QueueTest {
         assertFalse("false", que.isEmpty());
     }
 
-    // Ask TAs or Nicholas if I am testing for exception correctly
     @Test public void testCheckForException() {
         Queue que = new Queue();
         Exception exception = assertThrows(EmptyStackException.class, que::peek);

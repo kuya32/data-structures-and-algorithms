@@ -24,9 +24,9 @@ public class BinarySearchTree extends BinaryTree {
 
     public boolean contains(int value) {
         boolean hello = false;
-        if (numbers.size() > 0) {
-            for (int i = 0; i < numbers.size() - 1; i++) {
-                if (numbers.contains(value)) {
+        if (getNumbers().size() > 0) {
+            for (int i = 0; i < getNumbers().size() - 1; i++) {
+                if (getNumbers().contains(value)) {
                     hello = true;
                     break;
                 }

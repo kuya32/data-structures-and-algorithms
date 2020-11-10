@@ -8,10 +8,11 @@ import java.util.Arrays;
 import static org.junit.Assert.*;
 
 public class BinaryTreeTest {
+    private ArrayList<Integer> numbers = new ArrayList<>();
+
     @Test
     public void testEmptyTree() {
         BinaryTree tree = new BinaryTree(null);
-        ArrayList<Integer> numbers = new ArrayList<>();
 
         assertEquals(numbers, tree.inOrder());
     }
@@ -22,8 +23,8 @@ public class BinaryTreeTest {
         BinaryTree tree = new BinaryTree(ten);
 
         // TESTS ARE COMMENTED OUT BECAUSE CALLING "TREE.PREORDER()" KEEPS ADDING MORE NUMBERS TO ARRAY LIST. TEST ONE AT A TIME.
-//        assertNotNull("List shouldn't be null", tree.preOrder());
-//        assertEquals(1, tree.preOrder().size());
+        assertNotNull("List shouldn't be null", tree.preOrder());
+        assertEquals(1, tree.preOrder().size());
 //        int indexAt0 = tree.preOrder().get(0);
 //        assertEquals(10, indexAt0);
     }
@@ -148,8 +149,8 @@ public class BinaryTreeTest {
         assertEquals(Integer.MIN_VALUE, tree.findMaximumValue(null));
     }
 
-    @Test
-    public void testBreadthFirstTraversal() {
+    @Test (expected = Exception.class)
+    public void testBreadthFirstTraversal() throws Exception {
         Node ten = new Node(10);
         Node eight = new Node(8);
         Node seven = new Node(7);
@@ -157,6 +158,7 @@ public class BinaryTreeTest {
         Node eleven = new Node(11);
         Node twelve = new Node(12);
         Node thirteen = new Node(13);
+        Node thirtyTwo = new Node(32);
 
         ten.left = eight;
         eight.left = seven;
@@ -167,7 +169,15 @@ public class BinaryTreeTest {
 
         BinaryTree tree = new BinaryTree(ten);
         BinaryTree tree2 = new BinaryTree(null);
-        assertEquals(7, tree.breadthFirstTraversal(tree).size());
-        assertNotNull(tree.breadthFirstTraversal(tree));
+        BinaryTree tree3 = new BinaryTree(thirtyTwo);
+        ArrayList<Integer> output = tree.breadthFirstTraversal(tree);
+        ArrayList<Integer> output2 = tree2.breadthFirstTraversal(tree2);
+        ArrayList<Integer> output3 = tree3.breadthFirstTraversal(tree3);
+        String outputToString = "[10, 8, 12, 7, 9, 11, 13]";
+        String output2ToString = "[]";
+        String output3ToString = "[32]";
+        assertEquals(outputToString, output.toString());
+        assertEquals(output2ToString, output2ToString);
+        assertEquals(output3ToString, output3.toString());
     }
 }

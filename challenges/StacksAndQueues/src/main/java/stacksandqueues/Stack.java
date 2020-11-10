@@ -5,17 +5,6 @@ import java.util.EmptyStackException;
 public class Stack {
     public Node top = null;
 
-    public static void main(String[] args) {
-        Stack topper = new Stack(null);
-        topper.push(1);
-        topper.push(2);
-        topper.push(3);
-        System.out.println(topper.toString());
-        topper.pop();
-        topper.peek();
-        System.out.println(topper.toString());
-    }
-
     public Stack(Node top) {
         top = null;
     }
@@ -27,8 +16,11 @@ public class Stack {
         return temp.value;
     }
 
-    public int pop() {
+    public int pop() throws Exception {
         Node temp = top;
+        if (temp == null) {
+            throw new Exception("Stack is Empty!");
+        }
         top = top.next;
         temp.next = null;
         return temp.value;
