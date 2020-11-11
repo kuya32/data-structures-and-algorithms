@@ -11,7 +11,7 @@
 9. [Code Challenge 11: Queue with Stacks](#Queue-with-Stacks)
 10. [Code Challenge 12: First In, First Out Animal Shelter](#First-In,-First-Out-Animal-Shelter)
 11. [Code Challenge 13: Multi Bracket Validation](#Multi-Bracket-Validation)
-12. [Code Challenge 15: Trees: BT and BTS](#Trees:-BT-and-BTS)
+12. [Code Challenge 15: Trees: BT and BTS](#Trees-BT-and-BTS)
 13. [Code Challenge 16: Maximum Value in a Binary Tree](#Maximum-Value-in-a-Binary-Tree)
 14. [Code Challenge 17: Breadth First Traversal](#Breadth-First-Traversal)
 15. [Code Challenge 27: Merge Sort](challenges/src/main/java/challenges/sorts/merge/blog.md)
@@ -312,7 +312,7 @@ ________________________________________________________________________________
 
 ![Whiteboard for Code Challenge 13](assets/CC13Whiteboard.PNG)
 
-## Trees: BT and BTS
+## Trees BT and BTS
 
 - Able to traverse through a binary tree using three different ways:
   - Preorder
