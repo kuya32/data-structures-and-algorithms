@@ -6,7 +6,7 @@ import java.util.Queue;
 
 public class BinaryTree {
     public Node root = null;
-    public ArrayList<Integer> numbers = new ArrayList<>();
+    private ArrayList<Integer> numbers = new ArrayList<>();
 
     public BinaryTree() {
         this.root = root;
@@ -24,25 +24,12 @@ public class BinaryTree {
         this.root = root;
     }
 
-    public static void main(String[] args) {
-        Node ten = new Node(10);
-        Node eight = new Node(8);
-        Node seven = new Node(7);
-        Node nine = new Node(9);
-        Node eleven = new Node(11);
-        Node twelve = new Node(12);
-        Node thirteen = new Node(13);
+    public ArrayList<Integer> getNumbers() {
+        return numbers;
+    }
 
-        ten.left = eight;
-        eight.left = seven;
-        eight.right = nine;
-        ten.right = twelve;
-        twelve.left = eleven;
-        twelve.right = thirteen;
-
-        BinaryTree tree = new BinaryTree(ten);
-        System.out.println(tree.findMaximumValue(tree.root));
-        System.out.println(tree.inOrder());
+    public void setNumbers(ArrayList<Integer> numbers) {
+        this.numbers = numbers;
     }
 
     public ArrayList<Integer> preOrder() {
@@ -120,8 +107,12 @@ public class BinaryTree {
     }
 
     //Assistance from David Dickens
-    public ArrayList<Integer> breadthFirstTraversal(BinaryTree tree) {
+    public ArrayList<Integer> breadthFirstTraversal(BinaryTree tree) throws Exception{
         Node current = tree.root;
+        if (current == null) {
+            throw new Exception("Tree is empty!");
+        }
+        
         Queue<Node> que = new LinkedList<>();
         que.add(current);
         while (!que.isEmpty()) {
