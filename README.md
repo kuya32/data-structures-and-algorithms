@@ -5,21 +5,25 @@
 3. [Code Challenge 3: Binary Search](#Binary-Search)
 4. [Code Challenge 5: Linked List Implementation](#Singly-Linked-List)
 5. [Code Challenge 6: Insertions](#Insertions)
-6. [Code Challenege 7: Kth Value From End](#K-th-Value-From-End)
+6. [Code Challenge 7: Kth Value From End](#K-th-Value-From-End)
 7. [Code Challenge 8: Linked List Zipped](#Linked-List-Zipped)
 8. [Code Challenge 10: Stack and a Queue Implementation](#Stacks-and-Queues)
-9. [Code Challenge 11: Queue with Stacks](#Queue-with-Stack)
+9. [Code Challenge 11: Queue with Stacks](#Queue-with-Stacks)
 10. [Code Challenge 12: First In, First Out Animal Shelter](#First-In,-First-Out-Animal-Shelter)
 11. [Code Challenge 13: Multi Bracket Validation](#Multi-Bracket-Validation)
 12. [Code Challenge 15: Trees: BT and BTS](#Trees:-BT-and-BTS)
 13. [Code Challenge 16: Maximum Value in a Binary Tree](#Maximum-Value-in-a-Binary-Tree)
 14. [Code Challenge 17: Breadth First Traversal](#Breadth-First-Traversal)
-15. [Code Challenge 31: Repeated Word](#Repeated-Word)
-16. [Code Challenge 32: Tree Intersection](#Common-Value-Trees)
-17. [Code Challenge 33: HashMap Left Join](#Hashmap-LEFT-JOIN)
-18. [Code Challenge 35: Graph Implementation](#Graph-Implementation)
-19. [Code Challenge 36: Breadth First Graph Traversal](#Breadth-First-Graph-Traversal)
-20. [Code Challenge 37: Get Edges](#Get-Edges)
+15. [Code Challenge 27: Merge Sort](challenges/src/main/java/challenges/sorts/merge/blog.md)
+16. [Code Challenge 28: Quick Sort](challenges/src/main/java/challenges/sorts/quick/blog.md)
+17. [Code Challenge 30: Hash Table Implementation](#Hash-Table-Implementation)
+18. [Code Challenge 31: Repeated Word](#Repeated-Word)
+19. [Code Challenge 32: Tree Intersection](#Common-Value-Trees)
+20. [Code Challenge 33: HashMap Left Join](#Hashmap-LEFT-JOIN)
+21. [Code Challenge 35: Graph Implementation](#Graph-Implementation)
+22. [Code Challenge 36: Breadth First Graph Traversal](#Breadth-First-Graph-Traversal)
+23. [Code Challenge 37: Get Edges](#Get-Edges)
+24. [Code Challenge 38: Depth First Traversal](#Depth-Graph-Traversal)
 
 ## Reverse an Array
 
@@ -366,6 +370,38 @@ ________________________________________________________________________________
 ### Solution 17
 
 ![Code Challenge 17 Whiteboard](assets/CC17Whiteboard.PNG)
+
+## Hash Table Implementation
+
+### Hashtables
+
+Within the hashtable, the user specifies a key and the value you eant to link with that key. The key is then **hashed**, the hash code is used as the index and the value is stored within the table.
+
+### Challenge 30
+
+- Implement the Hashtable with the following methods:
+  - Add
+  - Get
+  - Contains
+  - Hash
+- Create tests to make sure the methods are returning the correct results
+
+### Approach & Efficiency 30
+
+- Big O
+  - Time: O(1)
+  - Space: O(1)
+
+### API 30
+
+- ``add``
+  - Takes in both the key and value. This method should hash the key, and add the key and value pair to the table, handling collisions as needed.
+- ``get``
+  - Takes in the key and returns the value from the table.
+- ``contains``
+  - Takes in the key and returns a boolean, indicating if the key exists in the table already.
+- ``hash``
+  - Takes in an arbitrary key and returns an index in the collection.
 
 ## Repeated Word
 

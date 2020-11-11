@@ -177,7 +177,7 @@ public class BinaryTreeTest {
         String output2ToString = "[]";
         String output3ToString = "[32]";
         assertEquals(outputToString, output.toString());
-        assertEquals(output2ToString, output2ToString);
+        assertEquals(output2ToString, output2.toString());
         assertEquals(output3ToString, output3.toString());
     }
 }
