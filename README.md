@@ -403,6 +403,10 @@ Within the hashtable, the user specifies a key and the value you eant to link wi
 - ``hash``
   - Takes in an arbitrary key and returns an index in the collection.
 
+### Solution 30
+
+![Code Challenge 30 Whiteboard](assets/CC30Whiteboard.PNG)
+
 ## Repeated Word
 
 - Find the first repeated word in a book.
